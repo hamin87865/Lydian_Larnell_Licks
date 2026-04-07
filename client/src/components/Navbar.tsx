@@ -1,7 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoImg from "@assets/LOGO_1772761008954.png";
 import { useAuth } from "@/contexts/AuthContext";
 
 export function Navbar() {
@@ -38,6 +37,8 @@ export function Navbar() {
 
   const dropdownItems = ["드럼", "피아노", "베이스", "기타"];
   const myPageItems = ["계정정보", "내활동", "알림", "설정"];
+
+  const logo = "/logo.png";
 
   const handleLogout = () => {
     logout();
@@ -81,7 +82,7 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <img
-            src={logoImg}
+            src={logo}
             alt="Logo"
             className="h-22 w-auto object-contain"
           />
